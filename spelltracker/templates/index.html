@@ -1,4 +1,8 @@
-{% extends base.html %}
+{% extends 'base.html' %}
 {% block content %}
+    {% for character in character_list %}
+        <h2><a href="">{{character.name}}</a></h2>
+        <div class="row"></div>
+    {% endfor %}
 
 {% endblock %}

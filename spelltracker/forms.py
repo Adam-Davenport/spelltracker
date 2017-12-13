@@ -6,7 +6,7 @@ class Character_Form(forms.ModelForm):
 
     class Meta:
         model = Character
-        fields = ('name')
+        fields = ('name',)
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'})
         }

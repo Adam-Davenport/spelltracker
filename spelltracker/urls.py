@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.Index.as_view(), name='index'),
     url(r'^create/$', views.Create.as_view(), name='create'),
-    url(r'^tracker/(?P<pk>\d)$', views.Tracker.as_view(), name='blog_details'),
+    url(r'^tracker/(?P<pk>\d)$', views.Tracker.as_view(), name='tracker'),
     url(r'^ajax/', include('ajax.urls')),
 ]

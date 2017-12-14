@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for character in character_list %}
-        <h2><a href="">{{character.name}}</a></h2>
-        <div class="row"></div>
+        <h2><a href="{% url 'tracker' pk=character.pk %}">{{character.name}}</a></h2>
     {% endfor %}
 
 {% endblock %}

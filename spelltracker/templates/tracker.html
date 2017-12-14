@@ -1,4 +1,23 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <h1>{{character.name}}</h1>
+    <table>
+        <tr>
+            <th>Level</th>
+            <th>Prepared</th>
+            <th>Spent</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="number" name="p1" id="p1" class="prepared" value="{{character.l1p}}"></td>
+            <td><input type="number" name="s1" id="s1" class="spent" value="{{character.l1s}}"></td>
+            <td><input type="number" name="r1" id="r1" class="remaining"></td>
+        </tr>
+    </table>
+    <button>Reset</button>
+
+{% endblock %}
+{% block script %}
+    <script src="{% static "js/main.js" %}"></script>>
 {% endblock %}

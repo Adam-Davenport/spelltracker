@@ -3,5 +3,5 @@ from ajax import views
 # Setup ajax endpoints here
 
 urlpatterns = [
-    url(r'^udpate/$', views.update_tracker, name='ajax_update')
+    url(r'^update/$', views.update_spells, name='update_spells')
 ]

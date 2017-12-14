@@ -1,6 +1,8 @@
 var prepared =  $(".prepared")
 var spent = $(".spent")
 var remaining = $(".remaining")
+var characterid = $("#characterid").first().val()
+
 
 // Update remaining spells per day
 function UpdateRemaining(){
@@ -14,7 +16,7 @@ function SyncSpells(){
         {
             url: '/ajax/update',
             data: {
-                'test': 'test client data'
+                'characterid': characterid,
             },
             dataType: 'json',
            success: function(data){

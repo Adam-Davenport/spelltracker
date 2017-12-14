@@ -3,6 +3,8 @@ from django.http import JsonResponse
 
 
 def update_spells(request):
+    characterid = request.GET.get('characterid', None)
+    print(characterid)
     data = {
         'test': 'test data'
     }

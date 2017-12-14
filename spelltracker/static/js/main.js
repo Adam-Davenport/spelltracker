@@ -16,6 +16,7 @@ function GetPrepared(){
     for(i=0; i<prepared.length; i++){
         array[i] = prepared[i].value
     }
+    return array
 }
 
 function GetSpent(){
@@ -23,6 +24,7 @@ function GetSpent(){
     for(i=0; i<spent.length; i++){
         array[i] = spent[i].value
     }
+    return array
 }
 
 function SyncSpells(){
@@ -32,11 +34,11 @@ function SyncSpells(){
             data: {
                 'characterid': characterid,
                 'prepared': GetPrepared(),
-                'spent': GetSpent()
+                'spent': GetSpent(),
             },
             dataType: 'json',
            success: function(data){
-               console.log(data)
+               console.log('Success')
            }
         }
     )

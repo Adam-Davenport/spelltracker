@@ -17,6 +17,7 @@ sudo service nginx restart
 # Python setup
 sudo apt install python3
 sudo apt install python-pip
+pip install Django==1.11
 
 # Galacticweapons setup
 python manage.py migrate

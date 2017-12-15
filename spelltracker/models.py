@@ -23,3 +23,12 @@ class Character(models.Model):
     l6s = models.IntegerField(default=0)
     l8s = models.IntegerField(default=0)
     l9s = models.IntegerField(default=0)
+
+    def AjaxUpdate(self, prepared, spent):
+        if prepared is not None:
+            self.l1p = prepared[0]
+            self.l2p = prepared[1]
+        if spent is not None:
+            self.l1s = spent[0]
+            self.l2s = spent[1]
+        self.save()

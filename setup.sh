@@ -26,5 +26,5 @@ python manage.py migrate
 python manage.py collectstatic
 
 # Supervisor setup
-sudo cp .setup/gunicorn.conf /etc/init/gunicorn.conf
+sudo cp .setup/spelltracker.conf /etc/init/spelltracker.conf
 sudo service supervisor restart

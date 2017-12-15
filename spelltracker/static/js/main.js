@@ -11,18 +11,10 @@ function UpdateRemaining(){
     }
 }
 
-function GetPrepared(){
+function GetArrayElements(spellArray){
     var array = []
-    for(i=0; i<prepared.length; i++){
-        array[i] = prepared[i].value
-    }
-    return array
-}
-
-function GetSpent(){
-    var array = []
-    for(i=0; i<spent.length; i++){
-        array[i] = spent[i].value
+    for(i=0; i<spellArray.length; i++){
+        array[i] = spellArray[i].value
     }
     return array
 }
@@ -33,8 +25,8 @@ function SyncSpells(){
             url: '/ajax/update',
             data: {
                 'characterid': characterid,
-                'prepared': GetPrepared(),
-                'spent': GetSpent(),
+                'prepared': GetArrayElements(prepared),
+                'spent': GetArrayElements(spent),
             },
             dataType: 'json',
            success: function(data){

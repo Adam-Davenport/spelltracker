@@ -20,6 +20,7 @@ function GetArrayElements(spellArray){
 }
 
 function SyncSpells(){
+    UpdateRemaining()
     $.ajax(
         {
             url: '/ajax/update',
@@ -36,6 +37,10 @@ function SyncSpells(){
     )
 }
 
+function Setup(){
+    UpdateRemaining()
+    prepared.change(SyncSpells)
+    spent.change(SyncSpells)
+}
 
-UpdateRemaining()
-SyncSpells()
+Setup()

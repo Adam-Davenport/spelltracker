@@ -2,7 +2,8 @@
 {% load static %}
 {% block content %}
 <h1>{{character.name}}</h1>
-    <table>
+<div class="container">
+    <table class="table">
         <tr>
             <th>Level</th>
             <th>Prepared</th>
@@ -65,6 +66,7 @@
 		</tr>
     </table>
     <button>Reset</button>
+</div>
 
 <input type="hidden" name="characterid" id="characterid" value="{{character.pk}}">
 {% endblock %}

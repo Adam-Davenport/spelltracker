@@ -9,7 +9,7 @@ class Character(models.Model):
     l3p = models.IntegerField(default=0)
     l4p = models.IntegerField(default=0)
     l5p = models.IntegerField(default=0)
-    l5p = models.IntegerField(default=0)
+    l6p = models.IntegerField(default=0)
     l7p = models.IntegerField(default=0)
     l8p = models.IntegerField(default=0)
     l9p = models.IntegerField(default=0)
@@ -20,7 +20,7 @@ class Character(models.Model):
     l4s = models.IntegerField(default=0)
     l5s = models.IntegerField(default=0)
     l6s = models.IntegerField(default=0)
-    l6s = models.IntegerField(default=0)
+    l7s = models.IntegerField(default=0)
     l8s = models.IntegerField(default=0)
     l9s = models.IntegerField(default=0)
 
